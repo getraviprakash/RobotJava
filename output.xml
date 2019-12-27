@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generator="Robot 3.1.2 (Jython 2.7.1 on java1.8.0_25)" generated="20191226 15:35:12.842">
+<suite source="D:\QA\javarobot" name="Javarobot" id="s1">
+<suite source="D:\QA\javarobot\src" name="Src" id="s1-s1">
+<suite source="D:\QA\javarobot\src\test" name="Test" id="s1-s1-s1">
+<suite source="D:\QA\javarobot\src\test\robotframework" name="Robotframework" id="s1-s1-s1-s1">
+<suite source="D:\QA\javarobot\src\test\robotframework\acceptance" name="Acceptance" id="s1-s1-s1-s1-s1">
+<suite source="D:\QA\javarobot\src\test\robotframework\acceptance\Test1.robot" name="Test1" id="s1-s1-s1-s1-s1-s1">
+<kw type="setup" library="pepcus_pages" name="Launch Website">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw library="Selenium2Library" name="Open Browser">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg level="INFO" timestamp="20191226 15:35:19.660">Opening browser 'chrome' to base url 'http://pepcus.com/'.</msg>
+<status endtime="20191226 15:35:27.088" starttime="20191226 15:35:19.644" status="PASS"></status>
+</kw>
+<kw library="Selenium2Library" name="Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<status endtime="20191226 15:35:28.281" starttime="20191226 15:35:27.096" status="PASS"></status>
+</kw>
+<kw library="BuiltIn" name="Wait Until Keyword Succeeds">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>5 sec</arg>
+<arg>0.4</arg>
+<arg>Page Should Contain Element</arg>
+<arg>//a[@class="navbar-brand"]</arg>
+</arguments>
+<kw library="Selenium2Library" name="Page Should Contain Element">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//a[@class="navbar-brand"]</arg>
+</arguments>
+<msg level="INFO" timestamp="20191226 15:35:28.357">Current page contains element '//a[@class="navbar-brand"]'.</msg>
+<status endtime="20191226 15:35:28.360" starttime="20191226 15:35:28.306" status="PASS"></status>
+</kw>
+<status endtime="20191226 15:35:28.372" starttime="20191226 15:35:28.290" status="PASS"></status>
+</kw>
+<status endtime="20191226 15:35:28.377" starttime="20191226 15:35:19.613" status="PASS"></status>
+</kw>
+<test name="Test Opening of Website" id="s1-s1-s1-s1-s1-s1-t1">
+<kw library="BuiltIn" name="Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Pepcus website opened successfully.</arg>
+</arguments>
+<msg level="INFO" timestamp="20191226 15:35:28.396">Pepcus website opened successfully.</msg>
+<status endtime="20191226 15:35:28.413" starttime="20191226 15:35:28.390" status="PASS"></status>
+</kw>
+<kw library="pepcus_pages" name="Open Tab">
+<arguments>
+<arg>//*[@id="myNavbar"]/ul/li[2]/a</arg>
+</arguments>
+<kw library="BuiltIn" name="Wait Until Keyword Succeeds">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10s</arg>
+<arg>0.5</arg>
+<arg>Click Element</arg>
+<arg>${page_name}</arg>
+</arguments>
+<kw library="Selenium2Library" name="Click Element">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${page_name}</arg>
+</arguments>
+<msg level="INFO" timestamp="20191226 15:35:28.446">Clicking element '//*[@id="myNavbar"]/ul/li[2]/a'.</msg>
+<status endtime="20191226 15:35:29.161" starttime="20191226 15:35:28.440" status="PASS"></status>
+</kw>
+<status endtime="20191226 15:35:29.166" starttime="20191226 15:35:28.431" status="PASS"></status>
+</kw>
+<status endtime="20191226 15:35:29.174" starttime="20191226 15:35:28.424" status="PASS"></status>
+</kw>
+<status critical="yes" endtime="20191226 15:35:29.180" starttime="20191226 15:35:28.382" status="PASS"></status>
+</test>
+<kw type="teardown" library="Selenium2Library" name="Close Browser">
+<doc>Closes the current browser.</doc>
+<status endtime="20191226 15:35:31.693" starttime="20191226 15:35:29.198" status="PASS"></status>
+</kw>
+<doc>Page Locators of Pepcus pages</doc>
+<status endtime="20191226 15:35:31.715" starttime="20191226 15:35:15.425" status="PASS"></status>
+</suite>
+<status endtime="20191226 15:35:31.765" starttime="20191226 15:35:15.347" status="PASS"></status>
+</suite>
+<status endtime="20191226 15:35:31.801" starttime="20191226 15:35:15.278" status="PASS"></status>
+</suite>
+<status endtime="20191226 15:35:31.826" starttime="20191226 15:35:15.202" status="PASS"></status>
+</suite>
+<status endtime="20191226 15:35:31.856" starttime="20191226 15:35:15.115" status="PASS"></status>
+</suite>
+<status endtime="20191226 15:35:31.886" starttime="20191226 15:35:14.816" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" name="Javarobot" id="s1">Javarobot</stat>
+<stat pass="1" fail="0" name="Src" id="s1-s1">Javarobot.Src</stat>
+<stat pass="1" fail="0" name="Test" id="s1-s1-s1">Javarobot.Src.Test</stat>
+<stat pass="1" fail="0" name="Robotframework" id="s1-s1-s1-s1">Javarobot.Src.Test.Robotframework</stat>
+<stat pass="1" fail="0" name="Acceptance" id="s1-s1-s1-s1-s1">Javarobot.Src.Test.Robotframework.Acceptance</stat>
+<stat pass="1" fail="0" name="Test1" id="s1-s1-s1-s1-s1-s1">Javarobot.Src.Test.Robotframework.Acceptance.Test1</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="ERROR" timestamp="20191226 15:35:19.550">Error in file 'D:\QA\javarobot\src\test\robotframework\acceptance\Test1.robot': Importing test library 'SampleKeywordLibrary' failed: ImportError: No module named SampleKeywordLibrary
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\jython2.7.1\Lib\site-packages
+  C:\jython2.7.1\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\jython2.7.1\jython.jar
+  .</msg>
+<msg level="ERROR" timestamp="20191226 15:35:19.595">Error in file 'D:\QA\javarobot\src\test\pages\pepcus_pages.robot': Importing test library 'Sellinium2Library' failed: ImportError: No module named Sellinium2Library
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\jython2.7.1\Lib\site-packages
+  C:\jython2.7.1\Lib
+  __classpath__
+  __pyclasspath__/
+CLASSPATH:
+  C:\jython2.7.1\jython.jar
+  .</msg>
+</errors>
+</robot>
